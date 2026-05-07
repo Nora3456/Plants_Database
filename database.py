@@ -40,7 +40,7 @@ def add_plant(connection):
             print(f"{t[0]}. {t[1]}")
 
         print("0. Add New Type")
-        type_id = input("Type ID: ")
+        type_id = int(input("Type ID: "))
 
         if type_id == 0:
             new_type = input("Enter new plant type: ").strip()
@@ -48,9 +48,6 @@ def add_plant(connection):
             connection.commit()
             type_id = cursor.lastrowid
         
-        if connection is None:
-            print("Database connection failed")
-            return
 
         print("\nSelect Size:")
         cursor.execute("""
