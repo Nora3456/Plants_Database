@@ -4,7 +4,7 @@
 
 This is a Python and MySQL databse that allows users to manage a plant collection! They can view, update, add, and delete plants while story key informattion like plant name, plant type, size, location, and more!
 
-🔮🪄🤔👣🧐🧙🔮🪄🤔👣🧐🧙🔮🪄🤔👣🧐🧙🔮🪄🤔👣🧐
+🌱📆🪴☀️🌿💧🌱📆🪴☀️🌿💧🌱📆🪴☀️🌿💧🌱📆🪴☀️🌿💧
 
 ## ERD 
 This is my created ERD (Entry Relationship Diagram), it shows the draft process of my program, that includes how each entity has a relationship to another. 
