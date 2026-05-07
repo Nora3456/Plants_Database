@@ -1,37 +1,37 @@
 CREATE DATABASE IF NOT EXISTS plant_db;
 USE plant_db;
 
--- PLANT TYPES
+-- Plant types
 CREATE TABLE plant_types (
     type_id INT AUTO_INCREMENT PRIMARY KEY,
     type_name VARCHAR(50) NOT NULL UNIQUE
 );
 
--- SIZES
+-- Sizes
 CREATE TABLE sizes (
     size_id INT AUTO_INCREMENT PRIMARY KEY,
     size_name VARCHAR(20) NOT NULL UNIQUE
 );
 
--- LOCATIONS
+-- location
 CREATE TABLE locations (
     location_id INT AUTO_INCREMENT PRIMARY KEY,
     location_name VARCHAR(50) NOT NULL UNIQUE
 );
 
--- SUNLIGHT LEVELS
+-- sunlight amounts
 CREATE TABLE sunlight_levels (
     sunlight_id INT AUTO_INCREMENT PRIMARY KEY,
     level VARCHAR(50) NOT NULL UNIQUE
 );
 
--- WATERING SCHEDULES
+-- watering schedules
 CREATE TABLE watering_schedules (
     schedule_id INT AUTO_INCREMENT PRIMARY KEY,
     description VARCHAR(100) NOT NULL UNIQUE
 );
 
--- MAIN PLANTS TABLE
+-- main plants table
 CREATE TABLE plants (
     plant_id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
@@ -52,17 +52,4 @@ CREATE TABLE plants (
     FOREIGN KEY (sunlight_id) REFERENCES sunlight_levels(sunlight_id),
 
     CHECK (name <> '')
-);
-
--- MANY-TO-MANY JUNCTION TABLE (REQUIRED)
-CREATE TABLE plant_watering (
-    plant_id INT,
-    schedule_id INT,
-
-    PRIMARY KEY (plant_id, schedule_id),
-
-    FOREIGN KEY (plant_id) REFERENCES plants(plant_id)
-        ON DELETE CASCADE,
-
-    FOREIGN KEY (schedule_id) REFERENCES watering_schedules(schedule_id)
 );
