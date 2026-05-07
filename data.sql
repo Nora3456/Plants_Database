@@ -8,7 +8,7 @@ INSERT INTO plant_types (type_name) VALUES
 ('Nerve Plant'),
 ('Corn Plant'),
 ('Dracaena'),
-('Palm');
+('Palm')
 
 INSERT INTO sizes (size_name) VALUES
 ('extra-small'),

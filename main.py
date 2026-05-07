@@ -6,22 +6,30 @@ def main():
         return
 
     while True:
-        print("\nPlant Manager")
-        print("1. Add Plant")
+        print("\n1. Add Plant")
         print("2. View Plants")
-        print("3. Exit")
+        print("3. Update Plant")
+        print("4. Delete Plant")
+        print("5. Exit")
 
         choice = input("Choice: ")
 
         if choice == "1":
             name = input("Enter plant name: ")
-            add_plant(conn, name)
+            add_plant(conn)
 
         elif choice == "2":
             view_plants(conn)
-
+        
         elif choice == "3":
+            update_plant(conn)
+
+        elif choice == "4":
+            delete_plant(conn)
+
+        elif choice == "5":
             break
+        
 
     conn.close()
 
