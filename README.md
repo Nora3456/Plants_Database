@@ -42,8 +42,8 @@ Here are NECESSARY requirements to run this application:
 - Input the number associated with the location of your chosen plant, if the location your plant is in does not match the pre-made list, than input 0 and press enter to add a new location, otherwise input a number from the pre-added list and press enter.
 - Input the number associated with the level of sunlight your plant receives, then press enter. 
 - **You have succesfully added a plant!**
-** EXAMPLE: **
-- INSERT ADD NEW PLANT SCREENSHOT HERE
+**EXAMPLE:**
+<img src="Screenshot 2026-05-07 003504.png" alt="Screenshot of how to add a plant" width="200"/>
 
 
 3. 🧐 | If you input 2, you want to **view your plants!** You can see the name of you plant first, followed by all the information you included about your plant from step 1! If you don't see your plant, than you likely interrupted your add before succesfully adding your plant. Re-input your plants information if so. 
@@ -57,7 +57,8 @@ Here are NECESSARY requirements to run this application:
 - If you are sure you want to delete your plant, input "yes" and press enter, if not, input "no" and press enter.
 
 ## Table Descriptions
-"""INSERT MYSQL TABLES SCREENSHOT"""
+ <img src="Screenshot 2026-05-07 005810.png" alt="Screenshot of plants database tables" width="200"/>
+
 - **plants**: stores information about individual plants (name, age, etc.)
 - **plant_types**: stores plant categories (Pothos, Aloe Vera, etc.)
 - **sizes**: stores plant size options
